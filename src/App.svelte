@@ -1,10 +1,14 @@
 <script>
 	export let name;
+	import {pushFiles} from './lib/github_lib.js';
+	pushFiles( 'szk3600','svelte-lp','dev', 'Making a commit with my adorable files',
+							 [ {content: 'You are a Wizard, Harry', path: 'test/harry.txt'},
+								 {content: 'May the Force be with you', path: 'test/jedi.txt'} ])
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+
 </main>
 
 <style>
